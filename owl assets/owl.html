@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://kit.fontawesome.com/3ff280d6d0.js" crossorigin="anonymous"></script>
+  
+</head>
+<style>
+ 
+ #next{
+    top: 100.86px;
+    right: 20px;
+    position: absolute;
+    z-index: 2;
+    padding: 13px 23px;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    background: rgba(223, 223, 223, .8);
+    border: 1px solid slategray;
+ }
+ #next:hover{
+  background: rgb(223, 223, 223);
+  transition: all ease-out .2s;
+ }
+ #previous{
+    top: 100.86px;
+    left: 20px;
+    position: absolute;
+    z-index: 2;
+    padding: 13px 23px;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    background: rgba(223, 223, 223, .8);
+    border: 1px solid slategray;
+ }
+ #previous:hover{
+  background: rgb(223, 223, 223);
+  transition: all ease-out .2s;
+ }
+ .icon-center{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+.list{
+    max-width: 106px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(122,118,118,1) 0%, rgba(0,0,0,1) 97%); 
+    padding: 30px;
+    border-radius: 15px;
+}
+.list li a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.list li a:hover{
+transform: scale(1.1);
+transition: all ease-in-out .2s;
+}
+.list-1, .link-1{
+  color: deepskyblue;
+}
+.list-2, .link-2{
+  color: white;
+}
+.list-3, .link-3{
+  color: cornflowerblue;
+}
+.list-4, .link-4{
+  color: mediumseagreen;
+}
+.list-5, .link-5{
+  color: darkgray;
+}
+.list-6, .link-6{
+  color: lightgray;
+}
+.list-7, .link-7{
+  color: dimgray;
+}
+.list-8, .link-8{
+  color: skyblue;
+}
+
+ @media only screen and (max-width: 1000px){
+  #next{
+    top: 84.52px;
+  }
+  #previous{
+    top: 84.52px;
+  }
+  .icon-center{
+    top: 25%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  #next{
+    top: 133px;
+  }
+  #previous{
+    top: 133px;
+  }
+  .icon-center{
+    top: 40%;
+  }
+}
+ 
+</style>
+
+<body>
+
+
+    <div class="owl-carousel owl-service owl-theme">
+      <div class="item" data-hash="zero">
+        <img class="owl-lazy" data-src="assets/img/bmw 1 series.jpg" alt="">
+      </div>
+      <div class="item" data-hash="one">
+        <img class="owl-lazy" data-src="assets/img/bmw 2 serie.jpg" alt="">
+      </div>
+      <div class="item" data-hash="two">
+        <img class="owl-lazy" data-src="assets/img/bmw 3 series.jpg" alt="">
+      </div>
+      <div class="item" data-hash="three">
+        <img class="owl-lazy" data-src="assets/img/bmw m4 series.jpg" alt="">
+      </div>
+      <div class="item" data-hash="four">
+        <img class="owl-lazy" data-src="assets/img/bmw 5 series.jpg" alt="">
+      </div>
+      <div class="item" data-hash="five">
+        <img class="owl-lazy" data-src="assets/img/bmw 6 series.webp" alt="">
+      </div>
+      <div class="item" data-hash="six">
+        <img class="owl-lazy" data-src="assets/img/bmw 7 series.jpg" alt="">
+      </div>
+      <div class="item" data-hash="seven">
+        <img class="owl-lazy" data-src="assets/img/bmw 8 series.webp" alt="">
+      </div>
+    </div>
+ 
+
+    <i class="icon-center fa-solid fa-grip-lines"></i>
+
+
+  <h3>Cars Catalog :</h3>
+  <ul class="list">
+    <li class="list-1"><a class="link-1" href="#zero">Bmw 1 Series</a></li><br>
+    <li class="list-2"> <a class="link-2" href="#one">Bmw 2 Series</a></li><br>
+    <li class="list-3"><a class="link-3" href="#two">Bmw 3 Series</a></li><br>
+    <li class="list-4"><a class="link-4" href="#three">Bmw 4 Series</a></li><br>
+    <li class="list-5"><a class="link-5" href="#four">Bmw 5 Series</a></li><br>
+    <li class="list-6"><a class="link-6" href="#five">Bmw 6 Series</a></li><br>
+    <li class="list-7"><a class="link-7" href="#six">Bmw 7 Series</a></li><br>
+    <li class="list-8"><a class="link-8" href="#seven">Bmw 8 Series</a></li>
+  </ul>
+
+ 
+  <br>
+  <button id="previous"><i class="fa-solid fa-angle-left"></i></button>
+  <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+  <br>
+  
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

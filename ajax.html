@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .add-post{
+    text-align: center;
+  }
+  #posts{
+    text-align: center;
+  }
+  h1{
+    text-align: center;
+  }
+  h3{
+    color: #7a1c00;
+    font-size: 23px;
+  }
+  b{
+    color: #7a1c00;
+    font-size: 20px;
+  }
+  p{
+    font-size: 14px;
+    color: #7a1c00;
+  }
+  .deleteBtn{
+    border: none;
+    background: rosybrown;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .deleteBtn:hover{
+    transform: scale(1.05);
+    transition: all ease-out .1s;
+  }
+  .newPost{
+    color: #7a1c00;
+    font-size: 25px;
+    margin-bottom: 18px;
+  }
+  .updateBtn{
+    border: none;
+    background: rosybrown;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+  .updateBtn:hover{
+    transform: scale(1.05);
+    transition: all ease-out .1s;
+  }
+  .loadCmt{
+    border: none;
+    background: rosybrown;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  .loadCmt{
+    transform: scale(1.05);
+    transition: all ease-out .1s;
+  }
+  .inputTitle{
+    padding: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .inputNumber{
+    padding: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .textArea{
+    padding: 15px;
+    font-weight: bold;
+  }
+    #modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 600px;
+      overflow-y: scroll;
+      background: white;
+      border: 1px solid gray;
+      padding: 32px 25px 20px;
+    }
+  
+    #modal.active {
+      display: block;
+    }
+  
+    #modal button {
+      top: 15px;
+      right: 15px;
+      border: none;
+      background: rosybrown;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      position: absolute;
+    }
+    #modal button:hover{
+      transform: scale(1.05);
+      transition: all ease-out .1s;
+    }
+    .insertBtn{
+        background: #767676;
+        color: white;
+        border: none;
+        font-weight: bold;
+        padding: 15px 30px;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+    .insertBtn:hover{
+        transform: scale(1.05);
+        transition: all ease-out .1s;
+    }
+
+  </style>
+<body>
+    
+    <h1>AJAX posts</h1>
+
+    <div class="add-post">
+      <input type="text" id="title" placeholder="Title">
+      <br><br>
+      <input type="number" name="userId" id="userId" placeholder="User Id">
+      <br><br>
+      <textarea name="body" id="body" cols="30" rows="10"></textarea>
+      <br><br>
+      <button class="insertBtn" onclick="insertPost()">Insert Post</button>
+    </div>  
+
+    <hr>
+
+    <div id="posts"></div>
+    
+    <div id="modal">
+
+    <button onclick="closeModal()">Close</button>
+    <div id="comments">
+  
+    </div>
+  </div>
+
+
+    <script src="assets/js/ajax.js"></script>
+
+</body>
+</html>
